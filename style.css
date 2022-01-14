@@ -1,0 +1,138 @@
+/* ***************************************
+***** (<-- Imports -->)
+*************************************** */
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+/* ***************************************
+***** (<-- Varable -->)
+*************************************** */
+:root {
+  --max_width : 1200px;
+  --clr_primary :#E12C6D;
+
+
+}
+/* ***************************************
+***** (<-- Base -->)
+*************************************** */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+}
+p {
+  font-size: 1.8rem;
+}
+/* ***************************************
+***** (<-- Layout -->)
+*************************************** */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  /* Only For Desktop */
+  width: 1280px; 
+}
+
+/* ********************************* */
+/* ************ Header ************ */
+header {
+  padding: 50px 0;
+  margin-bottom: 5rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h2 {
+  font-size: 2.5rem;
+  color: #000;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+} 
+ul > li {
+  font-size: 2rem;
+} 
+li > a {
+  text-decoration: none;
+  color: #000;
+}
+/* *********************************** */
+/* ************ Hero_Box ************ */
+.hero_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero_box--text h1{
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+.hero_box--text p {
+  margin: 3rem 0;
+}
+.img_container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./resources/logo/Circle\ design.svg);
+  background-size: cover;
+  background-position: center;
+} 
+.img_container img {
+  width: 100%;
+}
+
+/* ********************************** */
+/* ************ Sponser ************ */
+.sponser {
+  margin: 10rem auto 0;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #5555;
+  border-bottom: 1px solid #5555;
+  padding: 2rem 3rem;
+  
+}
+/* ***************************************
+***** (<-- Components -->)
+*************************************** */
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  background-color: var(--clr_primary);
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ***************************************
+***** (<-- Utility -->)
+*************************************** */
+.u_section_gap {
+  margin-bottom: 5rem;
+}
+/* ***************************************
+***** (<-- Media Quesry -->)
+*************************************** */
