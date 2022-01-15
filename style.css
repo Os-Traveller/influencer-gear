@@ -44,20 +44,36 @@ h4 {
 /* ***************************************
 ***** (<-- Layout -->)
 *************************************** */
-
 body {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   background-color: var(--clr_dark_white);
 }
 .container {
   /* Only For Desktop */
-  width: 1280px; 
+  max-width: 1280px; 
+  width: 100%;
+  padding: 1rem 2rem;
 }
 
 /* ********************************* */
 /* ************ Header ************ */
+.menu {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  display: none;
+}
+.st_line {
+  width: 100%;
+  background-color: #000;
+  height: 3px;
+}
+
 header {
   padding: 50px 0;
   margin-bottom: 5rem;
@@ -71,21 +87,30 @@ nav h2 {
   font-size: 2.5rem;
   color: #000;
 }
+.nav_content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 25px;
 } 
-ul > li {
-  font-size: 2rem;
-} 
 li > a {
+  font-size: 2rem;
   text-decoration: none;
   color: #000;
   display: inline-block;
   border-bottom: 2px solid transparent;
   padding-bottom: 1rem;
+}
+.nav_icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 /* *********************************** */
 /* ************ Hero_Box ************ */
@@ -364,3 +389,79 @@ nav > ul > li:hover > i{
 /* ***************************************
 ***** (<-- Media Quesry -->)
 *************************************** */
+
+/* **************************************** */
+/* ************ Desktop_Small ************ */
+@media screen and (max-width:1280px) {
+  body {
+    width: 100vw;
+  }
+  .container {
+    max-width: 1250px;
+    width: 100%;
+  }
+  .hero_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* ********************************** */
+/* ************ Tablet ************ */
+@media screen and (max-width:990px) {
+  body {
+    width: 100%;
+  }
+  .container {
+    max-width: 980px;
+    width: 100%;
+  }
+  .collection {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .menu {
+    display: flex;
+  }
+  nav ul{
+    display: none;
+  }
+  .review_container {
+    flex-direction: column;
+    gap: 100px;
+  } 
+}
+
+/* ********************************** */
+/* ************ Mobile ************ */
+@media screen and (max-width:700px) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    max-width: 690px;
+  }
+  .menu {
+    display: flex;
+  }
+  nav ul{
+    display: none;
+  }
+  .sponser {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .collection {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+  .review_container {
+    flex-direction: column;
+    gap: 100px;
+  } 
+}
