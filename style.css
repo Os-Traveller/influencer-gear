@@ -288,11 +288,8 @@ li > a {
 }
 .review > p {
   margin-top: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
-}
-.review > p > span:first-child {
-  font-size: 4rem;
 }
 .user_footer {
   width: 100%;
