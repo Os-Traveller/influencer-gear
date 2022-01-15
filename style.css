@@ -241,7 +241,7 @@ li > a {
   justify-content: center;
 }
 .user_review > h2 {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 } 
 .review_container {
   width: 100%;
@@ -450,9 +450,6 @@ nav ul > li:hover > a{
     flex-wrap: wrap;
     gap: 100px;
   } 
-  .user_review > h2 {
-    margin-bottom: 100px;
-  }
 }
 /* ********************************** */
 /* ************ Mobile ************ */
