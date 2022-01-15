@@ -11,7 +11,7 @@
   --clr_primary :#E12C6D;
   --clr_gray :#91919C;
   --clr_yellow: #FB8200;
-  --clr_dark_white : #10101010;
+  --clr_dark_white : #F5F7FF;
   --clr-blue: #0A0826;
 }
 /* ***************************************
@@ -49,7 +49,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background-color: var(--clr_dark_white); */
+  background-color: var(--clr_dark_white);
 }
 .container {
   /* Only For Desktop */
@@ -83,6 +83,9 @@ ul > li {
 li > a {
   text-decoration: none;
   color: #000;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 1rem;
 }
 /* *********************************** */
 /* ************ Hero_Box ************ */
@@ -110,7 +113,11 @@ li > a {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
 } 
+.img_container:hover {
+  transform: rotate(360deg);
+}
 .img_container img {
   width: 95%;
 }
@@ -133,6 +140,9 @@ li > a {
 /* ************ Product_Collection ************ */
 .product_collection {
   margin: 150px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 } 
 .product_collection_footer {
   display: flex;
@@ -155,7 +165,7 @@ li > a {
   font-weight: 700;
 }
 .product_collection > h2 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -168,7 +178,8 @@ li > a {
   border-radius: 10px;
   box-shadow: 0 0 5px 3px rgba(5, 5,5, 0.15);
   padding: 2rem;
-  background-color: var(--clr_dark_white)
+  background-color: #fff;
+  overflow: hidden;
 }
 .card img {
   width: 100%;
@@ -188,8 +199,75 @@ li > a {
   color: var(--clr_gray);
   font-weight: 700;
 }
-.card p span {
+.star {
   color: var(--clr_yellow);
+}
+
+/* ************************************** */
+/* ************ User_Review ************ */
+.user_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user_review > h2 {
+  margin-bottom: 15rem;
+} 
+.review_container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0rem 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgba(5,5,5, 0.15);
+}
+.review img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 10px solid #fff;
+  box-shadow: 0 0 5px 3px rgba(0,0,0, 0.1);
+}
+.review h2 {
+  font-size: 2.5rem;
+  margin: -5rem 0 1rem;
+}
+.review h3 {
+  font-size: 1.5rem;
+}
+.review > p {
+  margin-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.review > p > span:first-child {
+  font-size: 4rem;
+}
+.user_footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 5rem 0;
+} 
+.user_footer h2 {
+  font-size: 3rem;
+  color: var(--clr_primary);
+  padding: 0 1rem 1rem ;
+  transition: all 0.5s ease-in-out;
+}
+.user_footer h2:hover {
+  transform: scaleX(1.5);
 }
 
 /* ********************************** */
@@ -235,6 +313,48 @@ footer p {
   border-radius: 30px;
   color: #fff;
   font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}
+/* ***************************************
+***** (<-- Simple Effects -->)
+*************************************** */
+.btn:hover {
+  transform: scaleX(1.1);
+}
+section h2 {
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+section h2:hover {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  border-bottom: 2px solid var(--clr_primary);
+  color: var(--clr_primary);
+}
+.card img:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+  transition: all 0.5s ease-out;
+  z-index: 0;
+}
+.card img:hover + h2 {
+  color: var(--clr_primary);
+}
+.review img:hover {
+  transform: scale(1.1) translateY(-50%);
+  transition: all 0.5s ease-in-out;
+  border-color: var(--clr_primary);
+}
+nav >ul > li:hover > a{
+  color: var(--clr_primary);
+  border-color: var(--clr_primary);
+  transition: all 0.5s ease-in-out;
+}
+nav > ul > li:hover > i{
+  color: var(--clr_primary);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.2);
 }
 
 /* ***************************************
