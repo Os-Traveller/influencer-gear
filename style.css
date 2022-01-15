@@ -88,16 +88,11 @@ nav {
 nav h2 {
   font-size: 3rem;
   font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
   color: #000;
-  color: transparent;
-  background: linear-gradient(180deg, var(--clr-gr-1),var(--clr-gr-2));
-  padding: 1rem;
+  padding: 1rem 0;
   border-top: 3px solid var(--clr-gr-1);
   border-bottom: 3px solid var(--clr-gr-2);
-  /* Unfortuateny this features does not work in all browser */
-  background-clip: text;  
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
 }
 
 .nav_content {
