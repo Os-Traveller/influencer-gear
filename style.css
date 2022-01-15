@@ -1,7 +1,7 @@
 /* ***************************************
 ***** (<-- Imports -->)
 *************************************** */
-@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300;400;500;700&display=swap');
 
 /* ***************************************
 ***** (<-- Varable -->)
@@ -25,7 +25,7 @@
   margin: 0;
 }
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 62.5%;
 }
 p {
@@ -324,9 +324,7 @@ footer p {
 .icon_list i:hover {
   transform: scale(1.5);
 }
-/* .icon_list > .fab {
-  
-} */
+
 /* ***************************************
 ***** (<-- Components -->)
 *************************************** */
@@ -372,12 +370,12 @@ section h2:hover {
   transition: all 0.5s ease-in-out;
   border-color: var(--clr_primary);
 }
-nav >ul > li:hover > a{
+nav ul > li:hover > a{
   color: var(--clr_primary);
   border-color: var(--clr_primary);
   transition: all 0.5s ease-in-out;
 }
-nav > ul > li:hover > i{
+.nav_icon i:hover {
   color: var(--clr_primary);
   transition: all 0.5s ease-in-out;
   transform: scale(1.2);
@@ -393,18 +391,13 @@ nav > ul > li:hover > i{
 
 /* **************************************** */
 /* ************ Desktop_Small ************ */
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1200px) {
   body {
     width: 100vw;
   }
   .container {
     max-width: 1250px;
     width: 100%;
-  }
-  .hero_box {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
   }
 }
 
@@ -417,6 +410,11 @@ nav > ul > li:hover > i{
   .container {
     max-width: 980px;
     width: 100%;
+  }
+  .hero_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .collection {
     grid-template-columns: repeat(2,1fr);
