@@ -153,7 +153,7 @@ li > a {
   margin: 10rem auto 0;
   width: 80%;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -386,12 +386,9 @@ nav ul > li:hover > a{
   transform: scale(1.2);
 }
 
-/* ***************************************
-***** (<-- Utility -->)
-*************************************** */
 
 /* ***************************************
-***** (<-- Media Quesry -->)
+***** (<-- Media Query -->)
 *************************************** */
 
 /* **************************************** */
@@ -437,12 +434,15 @@ nav ul > li:hover > a{
   }
   .collection {
     grid-template-columns: repeat(2,1fr);
+    /* 2 grid for tab view */
   }
   .menu {
     display: flex;
+    /* to bring the menu back in tab view */
   }
   nav ul{
     display: none;
+    /* to hide the menu item */
   }
 }
 @media screen and (max-width:1080px) {
