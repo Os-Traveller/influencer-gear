@@ -153,8 +153,10 @@ li > a {
   margin: 10rem auto 0;
   width: 80%;
   display: flex;
+  gap: 20px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   border-top: 1px solid #5555;
   border-bottom: 1px solid #5555;
   padding: 2rem 3rem;
@@ -232,6 +234,7 @@ li > a {
 /* ************************************** */
 /* ************ User_Review ************ */
 .user_review {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,8 +244,10 @@ li > a {
   margin-bottom: 15rem;
 } 
 .review_container {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
 }
 .review {
@@ -403,18 +408,32 @@ nav ul > li:hover > a{
 
 /* ********************************** */
 /* ************ Tablet ************ */
-@media screen and (max-width:990px) {
+@media screen and (max-width:880px) {
   body {
     width: 100%;
   }
   .container {
-    max-width: 980px;
+    max-width: 870px;
     width: 100%;
   }
   .hero_box {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero_box--text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } 
+  .hero_box--text > h1 {
+    text-align: center;
+  }
+  .hero_box--text p {
+    text-align: center;
   }
   .collection {
     grid-template-columns: repeat(2,1fr);
@@ -425,15 +444,19 @@ nav ul > li:hover > a{
   nav ul{
     display: none;
   }
+}
+@media screen and (max-width:1080px) {
   .review_container {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 100px;
   } 
+  .user_review > h2 {
+    margin-bottom: 100px;
+  }
 }
-
 /* ********************************** */
 /* ************ Mobile ************ */
-@media screen and (max-width:700px) {
+@media screen and (max-width:680px) {
   html {
     font-size: 50%;
   }
@@ -442,25 +465,18 @@ nav ul > li:hover > a{
   }
   .container {
     width: 100%;
-    max-width: 690px;
-  }
-  .menu {
-    display: flex;
+    max-width: 670px;
   }
   nav ul{
     display: none;
   }
-  .sponser {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+  .hero_box--text p {
+    max-width: 30ch;
+    text-align: center;
   }
   .collection {
     grid-template-columns: 1fr;
     justify-content: center;
     align-content: center;
   }
-  .review_container {
-    flex-direction: column;
-    gap: 100px;
-  } 
 }
