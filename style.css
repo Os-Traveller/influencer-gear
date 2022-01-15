@@ -172,6 +172,7 @@ li > a {
 .product_collection_footer {
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
 }
 .product_collection_footer a {
   transition: all 0.5s ease-in-out;
